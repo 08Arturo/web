@@ -1,0 +1,281 @@
+<!DOCTYPE html> <html lang="es"> <head>
+    <meta charset="UTF-8"> <title>CVV Arturo</title> <style type="text/css">
+        /* --- ESTILOS CSS --- */
+
+        /* Asegura que elementos nuevos de HTML5 se comporten como bloques en navegadores muy viejos */
+        header, section, footer, aside, nav, article, figure, figcaption {
+            display: block;
+        }
+
+        /* Configuración base del cuerpo de la página */
+        body {
+            color: #666666; /* Color de texto gris oscuro */
+            background-color: #f9f8f6; /* Color de fondo crema claro */
+            /* Imagen de fondo con un patrón de líneas finas */
+            background-image: url("https://www.transparenttextures.com/patterns/pinstriped-suit.png"); 
+            background-position: center;
+            font-family: Georgia, Times, serif; /* Fuente con remates (estilo clásico) */
+            line-height: 1.4em; /* Espaciado entre líneas de texto */
+            margin: 0px; /* Quita los márgenes por defecto del navegador */
+        }
+
+        /* Contenedor principal centrado que limita el ancho de la web */
+        .wrapper {
+            width: 940px; /* Ancho fijo de la hoja del CV */
+            margin: 20px auto 20px auto; /* Centra el cuadro horizontalmente */
+            border: 2px solid #333333; /* Borde oscuro exterior */
+            background-color: #ffffff; /* Fondo blanco para el papel del CV */
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.1); /* Sombra suave alrededor para dar profundidad */
+        }
+
+        /* Cabecera del CV (Nombre y título) */
+        header {
+            height: 160px; /* Altura de la franja superior */
+            background-color: #4a4a4a; /* Fondo gris oscuro/carbón */
+            color: white; /* Texto en blanco para contraste */
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        /* Estilo del nombre principal */
+        header h1 {
+            margin: 10px 0;
+            font-size: 3em; /* Tamaño de letra grande */
+            text-transform: uppercase; /* Todo en mayúsculas */
+            letter-spacing: 2px; /* Separación entre letras */
+        }
+
+        /* Estilo del subtítulo (Técnico informático) */
+        header p {
+            font-style: italic; /* Letra cursiva */
+            font-size: 1.2em;
+        }
+
+        /* Menú de navegación y pie de página */
+        nav, footer {
+            clear: both; /* Evita que otros elementos se amontonen a los lados */
+            color: #ffffff;
+            background-color: #aeaca8; /* Color gris arena */
+            height: 35px;
+        }
+
+        /* Lista del menú */
+        nav ul {
+            margin: 0px;
+            padding: 7px 0px 5px 30px;
+        }
+
+        /* Elementos individuales del menú */
+        nav li {
+            display: inline; /* Pone los botones uno al lado del otro */
+            margin-right: 40px;
+        }
+
+        /* Enlaces del menú */
+        nav li a {
+            color: #ffffff;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8em;
+        }
+
+        /* Efecto al pasar el ratón por encima del menú */
+        nav li a:hover {
+            color: #000000; /* Cambia a negro */
+        }
+
+        /* Columna izquierda (Experiencia/Educación) */
+        section.main-content {
+            float: left; /* Flota a la izquierda para dejar espacio a la barra lateral */
+            width: 659px;
+            border-right: 1px solid #eeeeee; /* Línea divisoria vertical */
+            padding-bottom: 20px;
+        }
+
+        /* Contenedores de cada puesto o título educativo */
+        article {
+            clear: both;
+            overflow: auto; /* Ajusta la altura según el contenido */
+            width: 100%;
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee; /* Línea discontinua entre artículos */
+        }
+
+        /* Espaciado interno para que el texto no toque los bordes */
+        .content-box {
+            padding: 0 20px;
+        }
+
+        /* Barra lateral derecha (Habilidades y Contacto) */
+        aside {
+            width: 230px;
+            float: left; /* Se coloca al lado de la sección principal */
+            padding: 0px 0px 0px 20px;
+        }
+
+        /* Títulos de la barra lateral */
+        aside h2 {
+            padding: 30px 0px 10px 0px;
+            color: rgb(79, 72, 224); /* Azul vibrante */
+            border-bottom: 2px solid rgb(79, 72, 224);
+            font-size: 1.2em;
+        }
+
+        /* Etiquetas de habilidades individuales */
+        .skill-tag {
+            display: block; /* Una habilidad debajo de otra */
+            padding: 8px;
+            border-bottom: 1px solid #eeeeee;
+            font-size: 0.9em;
+        }
+
+        /* Efecto al pasar el ratón por las habilidades */
+        .skill-tag:hover {
+            background-color: #f9f9f9;
+            color: rgb(79, 72, 224);
+        }
+
+        /* Configuración de enlaces generales */
+        a {
+            color: rgb(79, 72, 224);
+            text-decoration: none; /* Quita el subrayado feo */
+        }
+
+        /* Títulos secundarios */
+        h2 {
+            margin: 20px 0px 5px 0px;
+            color: #333;
+        }
+
+        /* Títulos de puestos o certificados */
+        h3 {
+            margin: 0px 0px 10px 0px;
+            color: rgb(79, 72, 224);
+            font-size: 1.1em;
+        }
+
+        /* Estilo del pie de página */
+        footer {
+            font-size: 80%;
+            padding: 10px 0px 0px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body> <!-- Aquí comienza el cuerpo de mi página web, todo lo visible va dentro -->
+    
+    <div class="wrapper"> <!-- Creo un contenedor principal para organizar todo mi contenido -->
+
+        <header> <!-- Aquí coloco la cabecera de mi página -->
+            
+            <h1>Arturo Vega</h1> <!-- Aquí pongo mi nombre como título principal -->
+            
+            <p>Técnico informático</p> <!-- Aquí indico mi profesión o perfil profesional -->
+            
+            <nav> <!-- Aquí creo el menú de navegación -->
+                
+                <ul> <!-- Creo una lista desordenada para organizar los enlaces del menú -->
+                    
+                    <li><a href="#">Experiencia</a></li> <!-- Enlace a la sección de experiencia -->
+                    <li><a href="#">Educación</a></li> <!-- Enlace a la sección de educación -->
+                    <li><a href="#">Proyectos</a></li> <!-- Enlace a la sección de proyectos -->
+                    <li><a href="#">Contacto</a></li> <!-- Enlace a la sección de contacto -->
+                
+                </ul>
+            
+            </nav>
+        
+        </header>
+
+        <section class="main-content"> <!-- Aquí creo la sección principal del contenido -->
+            
+            <div class="content-box"> <!-- Creo una caja para organizar mejor el contenido -->
+
+                <h2>Experiencia Profesional</h2> <!-- Título de mi sección de experiencia -->
+                
+                <article> <!-- Creo un artículo para una experiencia concreta -->
+                    
+                    <hgroup> <!-- Agrupo el título y la fecha -->
+                        
+                        <h3>Estudiando SMR</h3> <!-- Nombre de mi experiencia o etapa actual -->
+                        
+                        <p><strong>Sept 2024 - Presente</strong></p> <!-- Indico el periodo de tiempo en negrita -->
+                    
+                    </hgroup>
+                    
+                    <p>
+                        Aumentando la base de mis conocimientos. Estudiando el ciclo de SMR (Sistemas Microinformáticos y Redes).
+                    </p> <!-- Aquí explico lo que estoy haciendo en esta etapa -->
+                
+                </article>
+
+                <h2>Educación</h2> <!-- Título de mi sección de educación -->
+                
+                <article> <!-- Creo un artículo para un estudio o certificado -->
+                    
+                    <hgroup> <!-- Agrupo el título y el centro educativo -->
+                        
+                        <h3>Certificado en salvamento acuático</h3> <!-- Nombre del certificado -->
+                        
+                        <p>EFES - Fuengirola</p> <!-- Centro donde lo obtuve -->
+                    
+                    </hgroup>
+                
+                </article>
+
+                <article> <!-- Otro artículo para otro estudio -->
+                    
+                    <hgroup> <!-- Agrupo título y centro -->
+                        
+                        <h3>Titulo ESO</h3> <!-- Nombre del título obtenido -->
+                        
+                        <p>IES Vega de Mijas</p> <!-- Centro educativo -->
+                    
+                    </hgroup>
+                
+                </article>
+            
+            </div>
+        
+        </section>
+
+        <aside> <!-- Aquí coloco información secundaria como habilidades y contacto -->
+            
+            <section class="skills"> <!-- Sección donde muestro mis habilidades -->
+                
+                <h2>Habilidades</h2> <!-- Título de la sección de habilidades -->
+                
+                <span class="skill-tag">Gestión de Proyectos</span> <!-- Habilidad individual -->
+                <span class="skill-tag">HTML5 / CSS3</span> <!-- Habilidad individual -->
+                <span class="skill-tag">Trabajo en equipo</span> <!-- Habilidad individual -->
+                <span class="skill-tag">Inglés Medio</span> <!-- Habilidad individual -->
+                <span class="skill-tag">Resolución de Problemas</span> <!-- Habilidad individual -->
+            
+            </section>
+
+            <section class="contact-details"> <!-- Sección donde pongo mis datos de contacto -->
+                
+                <h2>Contacto</h2> <!-- Título de la sección de contacto -->
+                
+                <p>
+                    📍 Málaga, España<br /> <!-- Indico mi ubicación -->
+                    📞 +00 123 456 789<br /> <!-- Indico mi teléfono -->
+                    📧 avegsue0701@g.educaand.es<br /> <!-- Indico mi correo electrónico -->
+                    🔗 https://github.com/08Arturo <!-- Indico mi perfil de GitHub -->
+                </p>
+            
+            </section>
+        
+        </aside>
+
+        <footer> <!-- Aquí creo el pie de página -->
+            
+            &copy; 2024 Arturo Vega - Currículum Vitae Profesional 
+            <!-- Aquí pongo los derechos de autor y el nombre de mi CV -->
+        
+        </footer>
+
+    </div> <!-- Aquí cierro el contenedor principal -->
+
+</body> <!-- Aquí termina el cuerpo de mi página -->
+</html> <!-- Aquí termina mi documento HTML -->
